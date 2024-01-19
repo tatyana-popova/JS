@@ -1,0 +1,21 @@
+let elements = prompt("Напишите десять чисел через пробел. Пример: 1 2 3 4 5 6 7 8 9 10");
+const elementsArray = elements.split(" ");
+const elementsArrayNumber = [];
+
+for (const element of elementsArray) {
+    elementsArrayNumber.push(parseInt(element));
+}
+
+if(elementsArrayNumber.length === 10) {
+    const minNumber = Math.min(...elementsArrayNumber);
+    const indexMinNumber = elementsArrayNumber.indexOf(minNumber);
+    const maxNumber = Math.max(...elementsArrayNumber);
+    const indexMaxNumber = elementsArrayNumber.indexOf(maxNumber);
+    elementsArrayNumber[indexMinNumber] = maxNumber;
+    elementsArrayNumber[indexMaxNumber] = minNumber;
+    console.log(elementsArrayNumber);
+} else if(elementsArrayNumber.length > 10) {
+    console.log("Ошибка: вы написали больше десяти чисел");
+} else {
+    console.log("Ошибка: вы написали меньше десяти чисел");
+}
