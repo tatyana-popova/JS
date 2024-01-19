@@ -1,0 +1,12 @@
+//Задача. У вас есть 5 чисел. Найдите наибольшее и наименьшее из них.
+
+let numbers = prompt("Напишите пять любых чисел через пробел. Пример: 1 5 67 34 0");
+const numbersArray = numbers.split(" ");
+const numberArrayInt = [];
+
+for (number of numbersArray) {
+    numberArrayInt.push(parseInt(number));
+}
+
+const maxNumber = Math.max(...numberArrayInt);
+const minNumber = Math.min(...numberArrayInt);
