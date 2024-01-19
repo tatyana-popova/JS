@@ -4,7 +4,7 @@ let numbers = prompt("Напишите пять любых чисел через
 const numbersArray = numbers.split(" ");
 const numberArrayInt = [];
 
-for (number of numbersArray) {
+for (const number of numbersArray) {
     numberArrayInt.push(parseInt(number));
 }
 
