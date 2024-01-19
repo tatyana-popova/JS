@@ -1,3 +1,5 @@
+//Задача. В массиве из 10 элементов поменяйте местами минимальный и максимальный элементы.
+
 let elements = prompt("Напишите десять чисел через пробел. Пример: 1 2 3 4 5 6 7 8 9 10");
 const elementsArray = elements.split(" ");
 const elementsArrayNumber = [];
