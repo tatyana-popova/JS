@@ -9,7 +9,6 @@ for (const number of numbersArray) {
 }
 
 const maxNumber = Math.max(...numberArrayInt);
-console.log(maxNumber);
-
 const minNumber = Math.min(...numberArrayInt);
-console.log(minNumber);
+
+console.log(`Наибольшее число – ${maxNumber}, наименьшее – ${minNumber}.`);
