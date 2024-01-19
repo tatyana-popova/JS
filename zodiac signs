@@ -1,0 +1,21 @@
+//Задача. Напишите программу, которая будет преобразовывать дату рождения в соответствующий знак зодиака.
+
+let monthInput = prompt("Укажите месяц вашего рождения. Пример: май");
+let dateInput = parseInt(prompt("Укажите число вашего рождения. Пример: 11"));
+
+const monthArray = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
+const dateArray = ["21", "20", "21", "21", "22", "22", "23", "22", "24", "24", "23", "23"];
+const signArray = ["водолей", "рыбы", "овен", "телец", "близнецы", "рак", "лев", "дева", "весы", "скорпион", "стрелец", "козерог"];
+
+let indexMonth = monthArray.indexOf(monthInput);
+let indexDate = indexMonth;
+
+if (indexMonth === 0 && dateInput < 21) {
+    sign = signArray[11];
+} else if (dateInput >= dateArray[indexDate]) {
+    sign = signArray[indexDate];
+} else {
+    sign = signArray[indexDate - 1];
+};
+
+console.log(`Ваш знак зодиака – ${sign}`);
