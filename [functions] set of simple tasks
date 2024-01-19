@@ -1,0 +1,87 @@
+//Написать функцию, которая складывает 2 числа
+let num1 = Number(prompt());
+let num2 = Number(prompt());
+
+function calcSum(a, b) {
+    let sum = a + b;
+    return sum;
+}
+
+calcSum(num1, num2);
+
+
+
+//Написать функцию, которая из первого числа вычитает второе
+let num1 = Number(prompt());
+let num2 = Number(prompt());
+
+function calcSub(a, b) {
+    return a - b;
+}
+
+let result = calcSub(num1, num2);
+console.log(result);
+
+
+
+//Написать функцию, которая перемножает три числа
+function calcMult(a, b, c) {
+    return a * b * c;
+}
+
+calcMult(1, 2, 3);
+calcMult(10, 32, 13);
+calcMult(4, 8, 13);
+
+
+
+//Написать функцию, которая возвращает true, если все три аргумента меньше 5. В ином случае – false
+function compareArg(a, b, c) {
+    if (a < 5 && b < 5 && c < 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+compareArg(1, 2, 3);
+compareArg(3, 4, 8);
+compareArg(8, 10, 12);
+
+
+
+//Написать функцию, которая выводит на экран текст прользователя и добавляет к нему !!!
+//Вариант 1
+function displayMessage(text, punctuation = '!!!') {
+    console.log(text + punctuation);
+}
+displayMessage('Привет');
+displayMessage('Hello');
+
+//Вариант 2
+let text = prompt();
+
+function displayMessage() {
+    console.log(text + '!!!');
+}
+displayMessage(text);
+
+
+
+//Написать функцию, которая возвращает один переданный аргумент
+function returnArg(x) {
+    return x;
+}
+
+returnArg(22);
+returnArg("привет, мир!");
+returnArg(true);
+
+
+
+//Написать функцию, которая ничего не делает
+function doNothing() {
+
+}
+
+doNothing();
