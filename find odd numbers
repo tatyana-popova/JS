@@ -1,0 +1,23 @@
+//Задача. В массиве из 10 элементов найти количество нечетных чисел.
+
+let numbers = prompt("Напишите десять чисел через пробел.Пример: 1 2 3 4 5 6 7 8 9 10");
+const numbersArray = numbers.split(" ");
+const numbersArrayNumber = [];
+let count = 0;
+
+for (const number of numbersArray) {
+    numbersArrayNumber.push(parseInt(number));
+}
+
+if(numbersArrayNumber.length === 10) {
+    for (let i = 0; i <= 9; i++) {
+        if(numbersArrayNumber[i] % 2 !== 0) {
+            count++;
+        }
+    }
+    console.log(`Количество нечетных чисел в вашем наборе – ${count}.`)
+} else if(numbersArrayNumber.length > 10) {
+    console.log("Ошибка: количество чисел больше 10.");
+} else {
+    console.log("Ошибка: количество чисел меньше 10.");
+}
