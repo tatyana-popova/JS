@@ -1,0 +1,14 @@
+//Задача. Напишите генератор случайных строк.
+
+const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+const alphabetArray = alphabet.split("");
+let randomWord = [];
+
+while (randomWord.length < 10) {
+    let randomLetter = alphabetArray[Math.floor(Math.random() * alphabetArray.length)];
+    randomWord.push(randomLetter);
+}
+
+let randomString = randomWord.join(" ");
+
+console.log(randomString);
