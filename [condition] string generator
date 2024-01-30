@@ -9,6 +9,6 @@ while (randomWord.length < 10) {
     randomWord.push(randomLetter);
 }
 
-let randomString = randomWord.join(" ");
+let randomString = randomWord.join("");
 
 console.log(randomString);
