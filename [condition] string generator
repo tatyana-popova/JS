@@ -6,8 +6,7 @@ const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэ
 let randomString = "";
 
 while (randomString.length < 10) {
-    let randomIndex = Math.floor(Math.random() * alphabet.length);
-    let randomLetter = alphabet[randomIndex];
+    let randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
     randomString += randomLetter;
 }
 
