@@ -1,0 +1,35 @@
+//Задача. Написать игру "угадай слово". Компьютер предлагает пользователю отгадать слово. Пользователь вводит буквы. Компьютер показывает отгаданные буквы. 
+
+//Выбираем случайное слово
+let wordsArray = ["кинотеатр", "салфетка", "гном", "сахар", "крючок", "таблетка", "дым", "мороженое", "лавочка", "усадьба"];
+let word = wordsArray[Math.floor(Math.random() * wordsArray.length)];
+
+//Создаем итоговый массив
+let answerArray = [];
+for (let i = 0; i < word.length; i++) {
+    answerArray[i] = "__";
+}
+
+//Создаем переменную, к-ая отслеживает, сколько букв осталось угадать
+let remainingLetters = word.length;
+
+//Программируем игровой цикл
+while (remainingLetters > 0) {
+    alert(`Слово из ${word.length} букв:\n\n\n${answerArray.join("  ")}`);
+    let guess = prompt("Напишите букву");
+    if (guess.length === 0) {
+        alert(`Вы не указали букву. Попробуйте ещё раз`);
+    } else if (guess.length !== 1) {
+        alert(`Введите только одну букву`);
+    } else {
+        for (let l = 0; l < word.length; l++) {
+            if (word[l] === guess.toLowerCase()) {
+                answerArray[l] = guess.toLowerCase();
+                remainingLetters--;
+            }
+        }
+    }
+}
+
+//Программируем конец игры
+alert(`Победа! Вы отгадали слово "${word}".`)
